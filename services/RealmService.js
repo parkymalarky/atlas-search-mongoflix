@@ -1,7 +1,7 @@
 import { Credentials, App } from "realm-web";
 
-const APP_ID = `mongoflix-cnmiu` // process.env.NEXT_PUBLIC_REALM_APP_ID;
-const BASE_URL = `westeurope.azure.realm.mongodb.com` // process.env.NEXT_PUBLIC_REALM_BASE_URL ?? "eu-central-1.aws.realm.mongodb.com";
+const APP_ID = process.env.NEXT_PUBLIC_REALM_APP_ID;
+const BASE_URL = process.env.NEXT_PUBLIC_REALM_BASE_URL ?? "eu-central-1.aws.realm.mongodb.com";
 export const REALM_GRAPHQL_ENDPOINT = `https://${BASE_URL}/api/client/v2.0/app/${APP_ID}/graphql`;
 
 const app = new App({
